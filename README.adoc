@@ -7,17 +7,21 @@ Ce dépôt concerne les rendus de mailto:A_changer@etu.univ-tlse2.fr[Jonh Doe].
 
 == TP1
 
-.Exemple de code
-[source,java]
----
-@Given("today is Sunday")
-public void today_is_sunday() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
----
+Feature: Is it Friday yet?
+  Everybody wants to know when it's Friday
 
-.Exemple d'image insérée en asciidoc
-image::artifacts-r303.svg[width=80%]
+  Scenario: Sunday isn't Friday
+    Given today is Sunday
+    When I ask whether it's Friday yet
+    Then I should be told "Nope"
+
+  Scenario: Friday is Friday
+    Given today is Friday
+    When I ask whether it's Friday yet
+    Then I should be told "TGIF"
+
+.Image de l'éxecution du test du TP1
+
+image::TP1_Tests_Success.png[width=80%]
 
 == TP2...
