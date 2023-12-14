@@ -131,4 +131,9 @@ Les tests :
 
 image::TP3_Tests_Success.png[width=80%]
 
+== TP4
+
+include::report.txt[]
+
+image::Serinity.png[width=80%]
 
